@@ -1,13 +1,16 @@
 \ProvidesClass{friggeri-cv}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
+
+
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
 \ProcessOptions\relax
-\LoadClass{article}
+%\LoadClass[11pt]{article}%
 
+\LoadClass[11pt]{article}
 
 %%%%%%%%%%
 % Colors %
@@ -17,6 +20,7 @@
 
 \definecolor{white}{RGB}{255,255,255}
 
+\definecolor{black}{RGB}{0,0,0}
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
@@ -31,6 +35,7 @@
   \colorlet{green}{gray}
   \colorlet{orange}{gray}
   \colorlet{purple}{gray}
+  \colorlet{brown}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
   \colorlet{fillheader}{white}
@@ -54,9 +59,9 @@
 \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmainfont[Mapping=tex-text, Color=black]{Helvetica Neue Light}
 
-\setmathfont{XITS Math}
+%\setmathfont{XITS Math}
 
 %%%%%%%%%%
 % Header %
@@ -97,11 +102,12 @@
   {%
     \color{%
       \ifcase\value{colorCounter}%
-        blue\or%
         red\or%
+        blue\or%
         orange\or%
         green\or%
-        purple\else%
+        purple\or%
+        brown\else%
         headercolor\fi%
     } #1#2#3%
   }%
@@ -131,25 +137,36 @@
 %%%%%%%%%%%%%%%%%%%%
 
 \setlength{\tabcolsep}{0pt}
-\newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
-  \end{tabular*}
-}
+%\newenvironment{entrylist}{%
+%  \begin{longtable}{ | p{1\textwidth} } 
+%}{%
+%  \end{longtable}
+%}
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
-    \textbf{#2}%
+%\newcommand{\entry}[3]{\fbox{\parbox[t]{13.5cm}{%
+%    \textbf{#1}%
+%    \hfill%
+%    {\footnotesize\addfontfeature{Color=lightgray} #2}\\%
+%    {#3}\vspace{2\parsep}%
+%  }\\}}
+\newcommand{\entry}[3]{\parbox[t]{13.5cm}{%
+    \textbf{#1}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    {\footnotesize\addfontfeature{Color=lightgray} #2}\\%
+    {#3}\vspace{2.5\parsep}%
   }\\}
+
+\newcommand{\entrynormal}[1]{\parbox[t]{13.5cm}{
+	\vspace{-1.5\parsep}
+    {#1}\vspace{2.5\parsep}%
+  }\\}
+
 
 
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
-
+%\RequirePackage[absolute,overlay,showboxes]{textpos}
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -158,7 +175,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{4.4}(1.0, 4.33)
   \begin{flushright}
   \obeycr
 }{%
@@ -175,6 +192,7 @@
 \RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
 
 \DeclareFieldFormat[article]{title}{#1\par}
+\DeclareFieldFormat[book]{title}{#1\par}
 \DeclareFieldFormat[inproceedings]{title}{#1\par}
 \DeclareFieldFormat[misc]{title}{#1\par}
 \DeclareFieldFormat[report]{title}{#1\par}
@@ -198,6 +216,27 @@
   }
   \par\vspace{0.3\baselineskip}
 }
+
+\DeclareBibliographyDriver{book}{%
+  \printfield{title}%
+  \newblock%
+  \printnames{author}%
+  \par%
+  \newblock%
+  {%
+    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \printlist{publisher}%
+    \setunit*{\addcomma\space}%
+    \printfield{note}%
+    \setunit*{\addcomma\space}%
+    \printfield{year}%
+    \setunit{\addcomma\space}%
+    \printlist{location}%
+    \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
 
 \DeclareBibliographyDriver{inproceedings}{%
   \printfield{title}%
@@ -281,5 +320,15 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[a4paper, left=6.3cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage{enumitem}
+\RequirePackage[urlbordercolor=brown]{hyperref}
+%%%%%%%%%%%%%%%%
+% Self Added %
+%%%%%%%%%%%%%%%%
+\RequirePackage[none]{hyphenat}
+%\def\labelitemi{--}
+
+%\let\olditem\item
+%\renewcommand{\item}{\setlength{\itemsep}{2pt}\olditem}
+\setitemize[0]{leftmargin=*}
