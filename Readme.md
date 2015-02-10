@@ -1,7 +1,5 @@
 # About
-Latest version of my CV, typesetted in Helvetica and using colors inspired by Monokai (there is an `print` option which renders in black and white, and reverts the header to dark on light, if printing on paper is needed).
-
-Uses TikZ for the header, XeTeX and fontspec to use Helvetica Neue, biblatex to print my publications and textpos for the aside.
+Latest version of my CV. Credits to Adrien Friggeri for provided the template. I have modified the layout to maximise the use of precious paper space.
 
 
 # License
