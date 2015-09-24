@@ -19,10 +19,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
 \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
-
 
 \begin{document}
 \header{Chong }{Yun Long}{} % Your name and current job title/field
@@ -34,11 +33,12 @@
 \begin{aside} % In the aside, each new line forces a line break
 \section{contact}
 +65 9852 0910
+\href{mailto:chong.yunlong@gmail.com}{chong.yunlong@gmail.com}
 ~
 \section{www}
-\href{mailto:chong.yunlong@gmail.com}{chong.yunlong@gmail.com}
-\href{https://secure.flickr.com/photos/clouddra/}{flickr.com/clouddra}
-\href{https://github.com/clouddra}{github.com/clouddra}
+{\color{dark-blue} \href{https://secure.flickr.com/photos/clouddra/}{flickr.com}
+\href{https://github.com/clouddra}{github.com}
+\href{https://sg.linkedin.com/in/chongyl}{linkedIn.com}}
 ~
 \section{languages}
 english -- fluent
@@ -46,23 +46,25 @@ chinese[mandarin] -- fluent
 japanese -- conversant
 ~
 \section{programming}
-{\color{red} $\varheartsuit$} \LaTeX{}
-JavaScript, CSS, HTML
-Objective-C, C++, C 
+Ruby, Python
+JavaScript (ES6)
+x86-64, C++, C 
 Java, C\#
-PHP, SQL
-PROMELA 
-LabVIEW, Qlikview
+Objective-C, PHP 
+\LaTeX{}
 ~
-\section{frameworks}
-Android, iOS
-JQuery, Bootstrap
-MPI, .NET, Charm-Crypto
+\section{frameworks/libraries}
+React.js, Ruby on Rails
+Flux, Alt, Immutable.js
+RSpec, Capybara
+Android SDK, iOS SDK
+diStorm disassembler
 ~
-\section{hobbies}
-japanese culture/anime
-photography = 
-\{cosplay, portrait, animals\}
+\section{tools}
+Webpack, Brakeman
+Burp Suite, mitmproxy
+IDA disassembler, QEMU
+~
 \end{aside}
 
 %----------------------------------------------------------------------------------------
@@ -77,7 +79,7 @@ photography =
 {Aug 2010 -- June 2014}
 {\emph{1st Class Honours in Bachelor of Computing, Computer Science}
 \begin{itemize}
-\item Dissertation (Applied Cryptography) -- \href{https://www.dropbox.com/s/litwm8etd4ot6m7/FYP\%20-\%20Efficient\%20Key\%20Aggregation\%20for\%20Cloud\%20Storage.pdf}{Efficient Key Aggregation for Cloud Storage}
+\item Dissertation (Applied Cryptography) -- \href{https://github.com/clouddra/FYP---Key-Aggregation/blob/master/paper/paper.pdf}{\emph{Efficient Key Aggregation for Cloud Storage}}
 \item Specialization in Information Security, focus area in Parallel Computing
 \item Awarded Dean's List for 3 semesters
 \end{itemize}
@@ -95,27 +97,43 @@ photography =
 \vspace{-2.2\parsep}
 \section{projects}
 \entrynormal{
-\begin{itemize}
-\item \emph{WEP Cracker} -- cryptanalysis attack on \href{https://en.wikipedia.org/wiki/RC4}{RC4 cipher} used in WEP
-\item \emph{QEP} (C\#) -- events planner featuring a customized budget optimizing algorithm
-\item \emph{TeachMe!} (CodeIgniter, JQuery) -- social networking site which aims to bring together people with common interests
-\item \emph{SPA} (C++) -- static source code analyzer and parser
-\end{itemize}
+\begin{description}[style=unboxed,leftmargin=0cm, parsep=1.5pt]
+\item[WEP Cracker] Cryptanalysis attack on \href{https://en.wikipedia.org/wiki/RC4}{RC4 cipher} used in WEP
+\item[QEP] Events planner featuring a customized budget optimizing algorithm
+\item[\href{https://github.com/sockmister/teach}{TeachMe!}] Social networking site which aims to bring together people with common interests
+\item[\href{https://github.com/clouddra/SPA}{SPA}] Static source code analyzer and parser
+\item[{\href{https://github.com/clouddra/Ethogram}{Ethogram}}] Android app which simplifies the process of cataloging and recording animal behavior
+\item[\href{https://github.com/clouddra/News-Butler}{News Butler}] Proof-of-concept Android news app which learns the preferences of user using data mining techniques
+\item[{\href{https://github.com/yzdong/impulsive-philanthropist-addon}{impulsive-philanthropist}}] Google Chrome extension that encourages people to make donations when making online purchases
+\end{description}
 }
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \vspace{-2.2\parsep}
-\section{experience}
+\section{experience}	
 
 \entry
+{\href{https://www.ida.gov.sg/}{Infocomm Development Authority of Singapore (IDA)}}
+{July 2014 -- Jan 2015}
+{\emph{Product Engineer, Government Digital Services}
+\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
+\item Ruby on Rails/React.js developer for Business Grant Portal (BGP) involving various government agencies
+\item Re-engineered the entire BGP frontend/backend into a single-page application to provide a slicker user experience and interface
+\item Established a unified architecture for BGP to reduce application complexity, improve code reusability, reliability and performance
+\item Mentored and coached the team, new hires and vendors on the latest open source technologies.
+\item Employed modern software development methodologies and techniques (scrum, test-driven development, pair programming, secure programming) to deliver quality products with high business value
+\item Educating the team on good security practices to minimize security vulnerabilities during application development 
+\end{itemize}}
+\entry
 {\href{https://www.dso.org.sg/}{DSO National Laboratories}}
-{July 2014 -- Now}
+{July 2014 -- Jan 2015}
 {\emph{Member of Technical Staff, Computer Security Lab}
-\begin{itemize}
+\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
 \item Analyzed protection mechanisms of Microsoft Windows kernel
 \item Researched novel reverse engineering techniques using emulators and virtualization technologies
+\item Conducted network security research on NAT networks
 \item If I told you more I would have to kill you \dots
 \end{itemize}}
 %\begin{entrylist}
@@ -124,7 +142,7 @@ photography =
 {\href{http://www.shoppink.me/}{TADA Pte Ltd}}
 {May 2013 -- Aug 2013}
 {\emph{Mobile Development Intern}
-\begin{itemize}
+\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
 \item Independently picked up iOS and Android development concepts within a period of 3 months
 \item Developed \href{http://www.shoppink.me/}{\emph{Shoppink}} (Android, 2 months) -- mobile e-commerce platform for blogshops. Shoppink uses a specialized algorithm to tracks products from over 200 blogshops
 \item Developed \href{http://www.shoppink.me/tomyself}{\emph{ToMyself}} (iOS, 1 month) -- mailer app designed for users who frequently send emails to themselves. \emph{ToMyself} is available on App Store
@@ -135,7 +153,7 @@ photography =
 {\href{http://www.rgei.com/}{RGE Pte Ltd}}
 {May 2011 -- July 2011}
 {\emph{Summer Intern}
-\begin{itemize}
+\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
 \item Collaborated extensively with overseas team members for the development and testing of corporate dashboard, which presents raw data in a visually meaningful way, assisting the top management in their decision making process 
 \item Assisted in the deployment of IT infrastructure for more than 100 staff in a newly renovated office
 \item Provided IT support for more than 300 end users, expediting the resolution of any technical problems faced so as to minimize disruption to their business
@@ -145,103 +163,68 @@ photography =
 \entry
 {\href{http://www.ncs.com.sg/}{NCS Pte Ltd}}
 {Nov 2009 -- May 2010}
-{\emph{Temporary Staff}
-\begin {itemize}
+{\emph{Temporary Staff, Chief Architect Office}
+\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
 \item Collaborated with a team of consultants of different nationalities for a multi-million dollar government project
-\item Assisted analysts in the design and coding of the mockups, giving clients a visual experience, allowing them to give better feedback on the system which improves the whole requirements gathering process
+\item Assisted analysts in the design and coding of the mockups, giving clients a visual experience, allowing them to give better feedback on the system and helps streamlines the requirements gathering process
 \item Developed a prototype as an illustrative reference for offshore development teams who may have difficulties understanding the specifications due to language barriers
-\item Received commendation letter from Project Manager
 \end{itemize}
 }
-\entry
-{\href{http://www.mindef.gov.sg/imindef/home.html}{National Service. MINDEF Medical Centre (MMC)}}
-{Jan 2008 -- Nov 2009}
-{\emph{Combat Medic, Registration/Appointment IC}
-\begin {itemize}
-\item Managed and supervised the registration and administration section of MMC
-\item Revamped registration and administration workflow, which help improved customer experience and alleviating unnecessary waiting
-\item Spearheaded the design of a standardized emergency drug manual and was awarded silver in WITs competition
-\item Received commendation from various officers throughout my stint in MMC
-\end{itemize}
-}
-\entry
-{\href{http://www.simtech.a-star.edu.sg/}{A*STAR (SIMTech)}}
-{Nov 2006 -- Dec 2006}
-{\emph{Research Intern}
-\begin {itemize}
-\item Worked in a team of research scientists for an A*STAR-Rolls Royce collaboration project.
-\item Calibrated and programmed an industrial gantry robot used for fuel cell assembly
-\item Contributed ideas to the design of the gantry robot
-\end{itemize}
-}
-%%----------------------------------------------------------------------------------------
-%%	COMMUNICATION SKILLS SECTION
-%%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
 \vspace{-2.2\parsep}
-\section{co-curricular}
+\section{certifications}
 \entry
-{\href{http://www.sg.emb-japan.go.jp/culture_kizuna.htm}{Kizuna Project}}
-{Jul 2012}
-{\emph{Cultural exchange program to Japan}
-\begin{itemize}
-\item Gained awareness of Japan's post-earthquake revival efforts as well as the economic and social impact the earthquake had on Fukushima 
-\item Created a \href{http://courseware.nus.edu.sg/e-raion/document/KIZUNA/ChongYunLongPhotobook.pdf}{photobook} and a \href{http://courseware.nus.edu.sg/e-raion/document/KIZUNA/ChongYunLongReport.pdf}{report} to share my experiences on the trip and to educate the public about the post-earthquake situation in Fukushima 
-\end{itemize}
+{Organizational Systems Web Application Pentester}
+{Since Apr 2015}
+{\href{http://securitystartshere.org/page-training-oswap.htm}{\emph{ThinkSECURE Pte Ltd}}}
+\entry
+{Certified ScrumMaster®}
+{Apr 2015 -- Apr 2017}
+{\href{https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm}{\emph{Scrum Alliance}}}
+\entry
+{Appian Application Designer}
+{Since Jun 2015}
+{\href{http://www.appian.com/services/training-services/application-designer-201/}{\emph{Appian Corporation}}}
 
-}
-%\vfill
-%\flushright
-%resume adapted from \\
-%\href{Friggeri Resume/CV}{https://github.com/afriggeri/CV}
+%%----------------------------------------------------------------------------------------
+%%	CO-CURRICULAR SKILLS SECTION
+%%----------------------------------------------------------------------------------------
+%\vspace{-2.2\parsep}
+%\section{co-curricular}
+%\entry
+%{\href{http://www.sg.emb-japan.go.jp/culture_kizuna.htm}{Kizuna Project}}
+%{Jul 2012}
+%{\emph{Cultural exchange program to Japan}
+%\begin{itemize}
+%\item Gained awareness of Japan's post-earthquake revival efforts as well as the economic and social impact the earthquake had on Fukushima 
+%\item Created a \href{http://courseware.nus.edu.sg/e-raion/document/KIZUNA/ChongYunLongPhotobook.pdf}{photobook} and a \href{http://courseware.nus.edu.sg/e-raion/document/KIZUNA/ChongYunLongReport.pdf}{report} to share my experiences on the trip and to educate the public about the post-earthquake situation in Fukushima 
+%\end{itemize}
+%}
 
-%\begin{entrylist}
-%%------------------------------------------------
+
 %\entry
-%{2011}
-%{Oral Presentation}
-%{California Business Conference}
-%{Presented the research I conducted for my Masters of Commerce degree.}
-%%------------------------------------------------
+%{\href{http://www.mindef.gov.sg/imindef/home.html}{National Service. MINDEF Medical Centre (MMC)}}
+%{Jan 2008 -- Nov 2009}
+%{\emph{Combat Medic, Registration/Appointment IC}
+%\begin {itemize}
+%\item Managed and supervised the registration and administration section of MMC
+%\item Revamped registration and administration workflow, which help improved customer experience and alleviating unnecessary waiting
+%\item Spearheaded the design of a standardized emergency drug manual and was awarded silver in WITs competition
+%\item Received commendation from various officers throughout my stint in MMC
+%\end{itemize}
+%}
+
 %\entry
-%{2010}
-%{Poster}
-%{Annual Business Conference, Oregon}
-%{As part of the course work for BUS320, I created a poster analyzing several local businesses and presented this at a conference.}
-%%------------------------------------------------
-%\end{entrylist}
-%
-%%----------------------------------------------------------------------------------------
-%%	INTERESTS SECTION
-%%----------------------------------------------------------------------------------------
-%
-%\section{interests}
-%
-%\textbf{professional:} data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing \textbf{personal:} piano, chess, cooking, dancing, running
-%
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS SECTION
-%----------------------------------------------------------------------------------------
-%
-%\section{publications}
-%
-%\printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
-%
-%\printbibsection{book}{books} % Print all books from the bibliography
-%
-%\begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
-%\nocite{*}
-%\printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
-%\end{refsection}
-%
-%\begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
-%\nocite{*}
-%\printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-%\end{refsection}
-%
-%\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
-%
-%\printbibsection{report}{research reports} % Print all research reports from the bibliography
-%
-%----------------------------------------------------------------------------------------
+%{\href{http://www.simtech.a-star.edu.sg/}{A*STAR (SIMTech)}}
+%{Nov 2006 -- Dec 2006}
+%{\emph{Research Intern}
+%\begin {itemize}
+%\item Worked in a team of research scientists for an A*STAR-Rolls Royce collaboration project.
+%\item Calibrated and programmed an industrial gantry robot used for fuel cell assembly
+%\item Contributed ideas to the design of the gantry robot
+%\end{itemize}
+%}
 
 \end{document}

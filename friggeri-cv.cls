@@ -30,6 +30,7 @@
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
+\definecolor{dark-blue}{HTML}{0000FF}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -38,8 +39,9 @@
   \colorlet{brown}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
+  \colorlet{dark-blue}{gray}
   \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+  \colorlet{header}{black}
 \else
   \colorlet{fillheader}{gray}
   \colorlet{header}{white}
@@ -320,7 +322,7 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[a4paper, left=6.3cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[a4paper, left=6.3cm,top=2cm,right=1.5cm,bottom=2cm,nohead,nofoot]{geometry}
 \RequirePackage{enumitem}
 \RequirePackage[urlbordercolor=brown]{hyperref}
 %%%%%%%%%%%%%%%%
