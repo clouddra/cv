@@ -19,9 +19,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
-
-\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+\documentclass[]{cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
 \begin{document}
 \header{Chong }{Yun Long}{} % Your name and current job title/field
@@ -46,25 +44,26 @@ chinese[mandarin] -- fluent
 japanese -- conversant
 ~
 \section{programming}
-Ruby, Python
-JavaScript (ES6)
-Java, x86-64, 
-C++, C,
+C\#, Ruby
+Typescript, JavaScript
+Java, Python, 
+C++, C, x86-64
 Erlang
 \LaTeX{}
 ~
 \section{frameworks/libraries}
-React.js, Ruby on Rails
-Redux, Alt, Immutable.js
-RSpec, Capybara
+React.js
+ASP.NET Core
+Ruby on Rails, RSpec
+Redux, Immutable.js
 Android SDK, iOS SDK
-diStorm disassembler
+%diStorm disassembler
 ~
-\section{tools}
-Webpack, Brakeman
-Burp Suite, mitmproxy
-IDA disassembler, QEMU
-~
+%\section{tools}
+%Webpack, Brakeman
+%Burp Suite, mitmproxy
+%IDA disassembler, QEMU
+%~
 \end{aside}
 
 %----------------------------------------------------------------------------------------
@@ -76,17 +75,13 @@ IDA disassembler, QEMU
 %------------------------------------------------
 \entry
 {\href{http://www.nus.edu.sg/}{National University of Singapore}}
-{Aug 2010 -- June 2014}
+{Aug 2010 \to June 2014}
 {\emph{1st Class Honours in Bachelor of Computing, Computer Science}
 \begin{itemize}
 \item Dissertation (Applied Cryptography) -- \href{https://github.com/clouddra/FYP---Key-Aggregation/blob/master/paper/paper.pdf}{\emph{Efficient Key Aggregation for Cloud Storage}}
 \item Specialization in Information Security, focus area in Parallel Computing
 \item Awarded Dean's List for 3 semesters
 \end{itemize}
-%\begin{itemize}
-%\item 
-%%\item Specializing in Systems Security, Computer Networks, Parallel Computing
-%\end{itemize} 
 }
 %------------------------------------------------
 %\end{entrylist}
@@ -94,51 +89,60 @@ IDA disassembler, QEMU
 %----------------------------------------------------------------------------------------
 %	Projects SECTION
 %----------------------------------------------------------------------------------------
-\vspace{-2.2\parsep}
-\section{projects}
-\entrynormal{
-\begin{description}[style=unboxed,leftmargin=0cm, parsep=1.5pt]
-\item[WEP Cracker] Cryptanalysis attack on \href{https://en.wikipedia.org/wiki/RC4}{RC4 cipher} used in WEP
-\item[\href{https://github.com/sockmister/teach}{TeachMe!}] Social networking site which aims to bring together people with common interests
-\item[\href{https://github.com/clouddra/SPA}{SPA}] Static source code analyzer and parser
-\item[{\href{https://github.com/clouddra/Ethogram}{Ethogram}}] Android app which simplifies the process of cataloging and recording animal behavior
-\item[\href{https://github.com/clouddra/News-Butler}{News Butler}] Proof-of-concept Android news app which learns the preferences of user using data mining techniques
-\item[{\href{https://github.com/yzdong/impulsive-philanthropist-addon}{impulsive-philanthropist}}] Google Chrome extension that encourages people to make donations when making online purchases
-\end{description}
-}
-
-\vspace{-2.2\parsep}
+%\vspace{-2.2\parsep}
+%\section{projects}
+%\entrynormal{
+%\begin{description}[style=unboxed,leftmargin=0cm, parsep=1.5pt]
+%\item[WEP Cracker] Cryptanalysis attack on \href{https://en.wikipedia.org/wiki/RC4}{RC4 cipher} used in WEP
+%\item[\href{https://github.com/sockmister/teach}{TeachMe!}] Social networking site which aims to bring together people with common interests
+%\item[\href{https://github.com/clouddra/SPA}{SPA}] Static source code analyzer and parser
+%\item[{\href{https://github.com/clouddra/Ethogram}{Ethogram}}] Android app which simplifies the process of cataloging and recording animal behavior
+%\item[\href{https://github.com/clouddra/News-Butler}{News Butler}] Proof-of-concept Android news app which learns the preferences of user using data mining techniques
+%\item[{\href{https://github.com/yzdong/impulsive-philanthropist-addon}{impulsive-philanthropist}}] Google Chrome extension that encourages people to make donations when making online purchases
+%\end{description}
+%}
 \section{publications}
-\entrynormal{
-\begin{description}[style=unboxed,leftmargin=0cm, parsep=1.5pt]
-\item[\href{https://github.com/dkhungme/FastKAC}{Practical and Scalable Sharing of Encrypted Data in Cloud Storage with Key Aggregation}] \href{http://ihmmsec.org/}{IH\&MMSec 2016}
-\item[\href{https://goo.gl/aFVeyy}{React Rails for Business Grants Portal}] Medium
-\end{description}
-}
+\entrysmall{\href{https://github.com/dkhungme/FastKAC}{Practical and Scalable Sharing of Encrypted Data in Cloud Storage with Key Aggregation}}{\href{http://ihmmsec.org/}{IH\&MMSec 2016}}
+\entrysmall{\href{https://goo.gl/aFVeyy}{React Rails for Business Grants Portal}}{Medium}
+%\end{description}
+%}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\vspace{-2.2\parsep}
+
 \section{experience}	
+\entry
+{\href{http://www.nutonomy.com/}{nuTonomy}}
+{Jan 2015 \to Now}
+{\emph{Software Engineer}
+\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
+\item Full stack developer (.NET Core/React) for shared services/mapping team.
+\item Implemented tiling based three.js mesh garbage collector which improved frame rates of annotated maps by 300\%.
+\item Introduced and coached the software team on Typescript/React. New CRUD services are written in Typescript/React and old services are incrementally rewritten using Typescript.
+\item Built and pioneered various microservices (logs processsing, bookings, command center, computations) using modern .NET core on linux. Established coding standards for all backend microservices used in the company.
+\item Set up one-command deployment procedures for all backend microservices by leverage on AWS cloud services(Elasticbeanstalk, Docker, Kinesis, Terraform). Uptime is higher and less error prone as compared to SSH-based deployments used previously.
+\item Migrated log processing service from a single machine to a cloud-based service using streaming and reactive programming techniques (Rx.NET), resulting in improved reliability and scalability (processing thousands of car logs $\approx$1TB daily)
+\item Set up company-wide authentication/authorization OAuth service using Auth0 to better protect company's intellectual property
+\item Technology stack: ASP.NET Core MVC, Typscript, React, Redux, AWS Tools
+\end{itemize}}
 
 \entry
-{\href{https://www.ida.gov.sg/}{Infocomm Development Authority of Singapore (IDA)}}
-{Jan 2015 -- Now}
+{\href{https://www.tech.gov.sg/}{Government Technology Agency of Singapore (GovTech)}}
+{Jan 2015 \to Now}
 {\emph{Product Engineer, Government Digital Services (GDS)}
 \begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Ruby on Rails/React.js developer for Business Grant Portal (BGP) involving various government agencies
-\item Re-engineered the entire BGP frontend/backend into a single-page application to provide a slicker user experience and interface
-\item Established a unified architecture for BGP to reduce application complexity, improve code reusability, reliability and performance
-\item Set up dashboards (\href{http://grafana.org/}{Grafana}, \href{https://prometheus.io/}{Prometheus}) to visualize key business metrics and to monitor system performance
-\item Built GDS's \href{http://gds-gov.tech/}{landing page} using \href{https://github.com/gatsbyjs/gatsby}{Gatsby.js}
+\item Ruby on Rails/React.js developer for Business Grant Portal (BGP) involving various government agencies.
+\item Re-engineered the entire BGP frontend/backend into a single-page application to provide a slicker user experience and interface.
+\item Established a unified architecture for BGP to reduce application complexity, improve code reusability, reliability and performanc.e
+\item Set up dashboards (\href{http://grafana.org/}{Grafana}, \href{https://prometheus.io/}{Prometheus}) to visualize key business metrics and to monitor system performance.
 \item Mentored and coached the team, new hires and vendors on the latest open source technologies.
-\item Employed modern software development methodologies and techniques (scrum, test-driven development, pair programming) to deliver quality products with high business value
- 
+\item Employed modern software development methodologies and techniques (scrum, test-driven development, pair programming) to deliver quality products with high business value. 
 \end{itemize}}
+
 \entry
 {\href{https://www.dso.org.sg/}{DSO National Laboratories}}
-{July 2014 -- Jan 2015}
+{July 2014 \to Jan 2015}
 {\emph{Member of Technical Staff, Computer Security Lab}
 \begin{itemize}[topsep=2.5pt, parsep=1.5pt]
 \item Analyzed protection mechanisms of Microsoft Windows kernel
@@ -150,54 +154,49 @@ IDA disassembler, QEMU
 %------------------------------------------------
 \entry
 {\href{http://www.shoppink.me/}{TADA Pte Ltd}}
-{May 2013 -- Aug 2013}
+{May 2013 \to Aug 2013}
 {\emph{Mobile Development Intern}
 \begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Independently picked up iOS and Android development concepts within a period of 3 months
-\item Developed \href{http://www.shoppink.me/}{\emph{Shoppink}} (Android, 2 months) -- mobile e-commerce platform for blogshops. Shoppink uses a specialized algorithm to tracks products from over 200 blogshops
-\item Developed \href{http://www.shoppink.me/tomyself}{\emph{ToMyself}} (iOS, 1 month) -- mailer app designed for users who frequently send emails to themselves. \emph{ToMyself} is available on App Store
-\item Gained insights into entrepreneurship 
+\item Independently picked up iOS and Android development concepts within a period of 3 months.
+\item Developed \href{http://www.shoppink.me/}{\emph{Shoppink}} (Android, 2 months) -- mobile e-commerce platform for blogshops. Shoppink uses a specialized algorithm to tracks products from over 200 blogshops.
+\item Developed \href{http://www.shoppink.me/tomyself}{\emph{ToMyself}} (iOS, 1 month) -- mailer app designed for users who frequently send emails to themselves. \emph{ToMyself} is available on App Store.
 \end{itemize}}
 %------------------------------------------------
-\entry
-{\href{http://www.rgei.com/}{RGE Pte Ltd}}
-{May 2011 -- July 2011}
-{\emph{Summer Intern}
-\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Collaborated extensively with overseas team members for the development and testing of corporate dashboard, which presents raw data in a visually meaningful way, assisting the top management in their decision making process 
-\item Assisted in the deployment of IT infrastructure for more than 100 staff in a newly renovated office
-\item Provided IT support for more than 300 end users, expediting the resolution of any technical problems faced so as to minimize disruption to their business
-\item Supported server and blackberry administration
-\end{itemize}}
+%\entry
+%{\href{http://www.rgei.com/}{RGE Pte Ltd}}
+%{May 2011 \to July 2011}
+%{\emph{Summer Intern}
+%\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
+%\item Collaborated extensively with overseas team members for the development and testing of corporate dashboard, which presents raw data in a visually meaningful way, assisting the top management in their decision making process 
+%\item Assisted in the deployment of IT infrastructure for more than 100 staff in a newly renovated office
+%\item Provided IT support for more than 300 end users, expediting the resolution of any technical problems faced so as to minimize disruption to their business
+%\item Supported server and blackberry administration
+%\end{itemize}}
 %------------------------------------------------
-\entry
-{\href{http://www.ncs.com.sg/}{NCS Pte Ltd}}
-{Nov 2009 -- May 2010}
-{\emph{Temporary Staff, Chief Architect Office}
-\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Collaborated with a team of consultants of different nationalities for a multi-million dollar government project
-\item Assisted analysts in the design and coding of the mockups, giving clients a visual experience, allowing them to give better feedback on the system and helps streamlines the requirements gathering process
-\item Developed a prototype as an illustrative reference for offshore development teams who may have difficulties understanding the specifications due to language barriers
-\end{itemize}
-}
+%\entry
+%{\href{http://www.ncs.com.sg/}{NCS Pte Ltd}}
+%{Nov 2009 -- May 2010}
+%{\emph{Temporary Staff, Chief Architect Office}
+%\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
+%\item Collaborated with a team of consultants of different nationalities for a multi-million dollar government project.
+%\item Assisted analysts in the design and coding of the mockups, giving clients a visual experience, allowing them to give better feedback on the system and helps streamlines the requirements gathering process.
+%\item Developed a prototype as an illustrative reference for offshore. development teams who may have difficulties understanding the specifications due to language barriers.
+%\end{itemize}
+%}
 %----------------------------------------------------------------------------------------
 %	CERTIFICATIONS
 %----------------------------------------------------------------------------------------
-\vspace{-2.2\parsep}
-\section{certifications}
-\entry
-{Kanban Management Professional - I}
-{Since Jun 2016}
-{\href{https://www.iss.nus.edu.sg/ProfessionalCourses/SearchCourse/CourseDetail/tabid/267/cid/399/cname/lean-kanban-foundation/Default.aspx}{\emph{Lean Kanban University}}}
-\entry
-{Organizational Systems Web Application Pentester}
-{Since Apr 2015}
-{\href{http://securitystartshere.org/page-training-oswap.htm}{\emph{ThinkSECURE Pte Ltd}}}
-\entry
-{Certified ScrumMaster®}
-{Apr 2015 -- Apr 2017}
-{\href{https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm}{\emph{Scrum Alliance}}}
 
+\section{certifications}
+\entrysmall
+{\href{https://www.iss.nus.edu.sg/ProfessionalCourses/SearchCourse/CourseDetail/tabid/267/cid/399/cname/lean-kanban-foundation/Default.aspx}{Kanban Management Professional - I}}
+{Jun 2016 \to Now}
+\entrysmall
+{\href{http://securitystartshere.org/page-training-oswap.htm}{Organizational Systems Web Application Pentester}}
+{Apr 2015 \to Now}
+\entrysmall
+{\href{https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm}{Certified ScrumMaster}}
+{Apr 2015 \to Apr 2017}
 %%----------------------------------------------------------------------------------------
 %%	CO-CURRICULAR SKILLS SECTION
 %%----------------------------------------------------------------------------------------
