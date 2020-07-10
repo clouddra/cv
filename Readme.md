@@ -1,5 +1,5 @@
 # About
-A new version of the famous Friggeri CV. My much simpler version now works without external font files, with regular (pdf)latex and without biber.
+Adaptation of Friggeri CV and https://github.com/eklenske/CV with column layouts. 
 
 
 # License
