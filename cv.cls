@@ -11,7 +11,7 @@
 % to avoid warnings, copy only one symbol from stmaryrd
 \DeclareSymbolFont{stmry}{U}{stmry}{m}{n}
 \DeclareMathSymbol\rightarrowtriangle\mathrel{stmry}{"5F}
-\renewcommand{\to}{$\rightarrowtriangle$}
+\renewcommand{\to}{\textrightarrow\hspace{3pt}}
 
 %%%%%%%%%%
 % Colors %
@@ -32,6 +32,7 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 \definecolor{dark-blue}{HTML}{0000FF}
+\definecolor{maroon}{HTML}{800000}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -41,6 +42,7 @@
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
   \colorlet{dark-blue}{gray}
+  \colorlet{maroon}{gray}
   \colorlet{fillheader}{white}
   \colorlet{header}{black}
 \else
@@ -69,6 +71,7 @@
 %%%%%%%%%%
 
 \RequirePackage{tikz}
+\RequirePackage{xargs}
 
 \newcommand{\rolefont}{%
   \fontsize{14pt}{24pt}\selectfont%
@@ -77,19 +80,18 @@
 }
 
 \newcommand{\header}[3]{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
-      \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
-    };
-    \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{header}%
-      \thinfont #3%
-    };
-  \end{tikzpicture}
-  \vspace{2.5cm}
-  \vspace{-2\parskip}
+\begin{tikzpicture}[remember picture,overlay]
+  \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth,
+  minimum height=30mm, yshift=8mm] (box) at (current page.north){};
+  \node [anchor=center] (name) at (box) {%
+  \fontsize{18pt}{36pt}\color{header}%
+  {\thinfont #1}{\bodyfont  #2}
+  };
+  \node [anchor=north] at (name.south) {%
+  \fontsize{14pt}{24pt}\color{header}%
+  \bodyfont\HUGE #3%
+  };
+\end{tikzpicture}
 }
 
 \newcommand{\smallheader}[2]{%
@@ -122,7 +124,7 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
         green\or%
         purple\or%
         brown\else%
-        headercolor\fi%
+        maroon\fi%
     } #1#2#3%
   }%
   \stepcounter{colorCounter}%
@@ -131,10 +133,10 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
   {%
-    \LARGE\headingfont\color{headercolor}%
+    \Large\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  \par\vspace{0.2\parskip}
 }
 
 \renewcommand{\subsection}[2]{
@@ -156,61 +158,50 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 %  \end{longtable}
 %}
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[3]{\parbox[t]{13.5cm}{%
-    \textbf{#1}%
+
+\newcommand{\role}[2]{
+    {#1}
     \hfill%
-    {\footnotesize\color{gray} \bodyfont #2}\\%
-    {#3}\vspace{\parsep}%
-  }\\}
+    {\footnotesize\color{gray} \bodyfont #2}%
+
+}
+\newcommand{\entry}[2]{
+    \textbf{#1}\\
+    {#2}\vspace{1.2\parsep}
+}\\
 
 \newcommand{\entrynormal}[1]{\parbox[t]{13.5cm}{
 	\vspace{-1.5\parsep}
     {#1}\vspace{\parsep}%
   }\\}
 
-\newcommand{\entrysmall}[2]{\parbox[t]{13.5cm}{%
+\newcommand{\entrysmall}[2]{
     {#1}%
     \hfill%
     {\footnotesize\color{gray} \bodyfont #2}\vspace{\parsep}
-  }\\}
+\\}
 
-
-
-%%%%%%%%%%%%%%
-% Side block %
-%%%%%%%%%%%%%%
-
-\RequirePackage[absolute,overlay]{textpos}
-\setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{1cm}
-\newenvironment{aside}{%
-  \let\oldsection\section
-  \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
-  }
-  \begin{textblock}{3.6}(1.5, 4.33)
-  \begin{flushright}
-  \obeycr
-}{%
-  \restorecr
-  \end{flushright}
-  \end{textblock}
-  \let\section\oldsection
-}
+\newcommand{\entryinfo}[1]{\parbox[t]{13.5cm}{%
+    \large\headingfont\color{headercolor}%
+    \@sectioncolor #1
+}}
 
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[a4paper, left=6.3cm,top=2cm,right=1.5cm,bottom=2cm,nohead,nofoot]{geometry}
+\RequirePackage[a4paper,left=1.5cm,top=1.5cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{enumitem}
-\RequirePackage[urlbordercolor=brown]{hyperref}
+\RequirePackage[urlbordercolor=brown,pdfborder={0 0 .6}]{hyperref}
 %%%%%%%%%%%%%%%%
 % Self Added %
 %%%%%%%%%%%%%%%%
 \RequirePackage[none]{hyphenat}
-%\def\labelitemi{--}
+\RequirePackage{multicol}
+\RequirePackage{textcomp}
+\RequirePackage{relsize}
 
-%\let\olditem\item
-%\renewcommand{\item}{\setlength{\itemsep}{2pt}\olditem}
 \setitemize[0]{leftmargin=*}
+\newenvironment{infoitemize}
+{\begin{itemize}[topsep=1.5pt, parsep=0.5pt,itemsep=1pt]}
+{\end{itemize}}

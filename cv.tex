@@ -22,167 +22,130 @@
 \documentclass[]{cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
 \begin{document}
-\header{Chong }{Yun Long}{} % Your name and current job title/field
+\header{Chong }{Yun Long}{Fullstack Software Engineer} % Your name and current job title/field
+
+\begin{multicols}{3}
+\entryinfo{contact}
+\begin{infoitemize}
+\item +65 9852 0910
+\item \href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com}
+\item \href{https://github.com/clouddra}{github.com/clouddra}
+\item \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}
+\end{infoitemize}
+\vspace*{\fill}
+\columnbreak
+\entryinfo{languages [human]}
+\begin{infoitemize}
+\item english \to fluent
+\item mandarin chinese \to fluent
+\item japanese \to conversant
+\end{infoitemize}
+\vspace*{\fill}
+\columnbreak
+\entryinfo{programming}
+\begin{infoitemize}
+\item Typescript, JavaScript, React, Redux, Next.js
+\item Java, Spring Boot
+\item C\#, ASP.NET core
+\item AWS, terraform
+\item Python, Ruby on Rails
+\end{infoitemize}
+\end{multicols}
+
+\vspace{-2\parsep}
 
 %----------------------------------------------------------------------------------------
-%	SIDEBAR SECTION
+%	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{aside} % In the aside, each new line forces a line break
-\section{contact}
-+65 9852 0910
-\href{mailto:chong.yunlong@gmail.com}{chong.yunlong@gmail.com}
-~
-\section{www}
-\href{https://secure.flickr.com/photos/clouddra/}{flickr.com/clouddra}
-\href{https://github.com/clouddra}{github.com/clouddra}
-\href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}
-~
-\section{languages}
-english -- fluent
-chinese[mandarin] -- fluent
-japanese -- conversant
-~
-\section{programming}
-C\#, Ruby
-Typescript, JavaScript
-Java, Python, 
-C++, C, x86-64
-Erlang
-\LaTeX{}
-~
-\section{frameworks/libraries}
-React.js
-ASP.NET Core
-Ruby on Rails, RSpec
-Redux, Immutable.js
-Android SDK, iOS SDK
-%diStorm disassembler
-~
-%\section{tools}
-%Webpack, Brakeman
-%Burp Suite, mitmproxy
-%IDA disassembler, QEMU
-%~
-\end{aside}
+\section{experience}
+
+\entry
+{\href{https://www.indeed.com/}{Indeed}}
+{
+\role{\emph{Senior Software Engineer, Careers}}{Apr 2019 \to Now}
+\begin{itemize}
+\item Full stack engineer working on \href{https://www.indeed.com/career}{\emph{Careers Explorer}} and \href{https://www.indeed.com/certifications/}{\emph{Certifications}}. \emph{Career Explorer} is the first large scale public facing node application at Indeed with over two million month views.
+\item Lead the frontend architecture design of \emph{Careers Explorer}.
+\item Built and launch \emph{Careers Explorer} together with a team of four engineers in three months. This includes various devops tasks (production/error monitoring, CDN integration, CI/CD pipelines).
+\item Coached both engineers within and outside of the team on various best practices ranging from API design, typescript and react development, backend best practices.
+\item Migrated \emph{Indeed Certifications} from legacy Django templates to React
+\item Technology stack: Java 8 Spring Boot, Next.js with Typescript, Styled System
+\end{itemize}
+}
+
+\entry
+{\href{https://www.aptiv.com/solutions/autonomous-mobility}{nuTonomy/Aptiv}}
+{
+\role{\emph{Senior Software Engineer, Data Platform}}{Sep 2018 \to Apr 2019}
+\vspace{-\belowdisplayshortskip}
+\role{\emph{Software Engineer, Data Platform}}{Jan 2017 \to Sep 2018}
+\begin{itemize}
+\item \emph{nuTonomy} was \href{https://techcrunch.com/2017/10/24/delphi-buys-nutonomy-for-400-million-to-scale-and-deliver-autonomous-vehicles/}{acquired by Delphi (now Aptiv) in Oct 2017 for USD\$400 million}.
+\item Full stack developer (.NET Core/React) for shared services/mapping team.
+\item Built large scale docker-based compute orchestration infrastructure which is able to dynamically scaled to support and coordinate hundreds of machines on AWS. The platform is used to support ML training pipelines, generate autonomous driving footage, running large scale safety simulations and computing important metrics.
+\item Set up one-command deployment procedures for all backend microservices by leverage on AWS cloud services (Serverless, Terraform). Uptime is higher and less error prone as compared to SSH-based deployments used previously.
+\item Setup and maintain Hadoop cluster processing large amounts of data generated from vehicle logs (4GB per vehicle per min)
+\item Introduced and coached the software team on Typescript/React. New CRUD services are written in Typescript/React and old services are incrementally rewritten using Typescript.
+\item Built and pioneered various microservices using modern .NET core on linux. Established coding standards for all backend microservices used in the company.
+\item Set up company-wide authentication/authorization using Auth0
+\item Implemented tiling based three.js mesh garbage collector which improved frame rates of annotated maps by 300\%.
+\item Technology stack: ASP.NET Core MVC, Hadoop, Spark, Typescript, Python, React, RxJS, AWS
+\end{itemize}
+}
+
+\pagebreak
+
+\entry
+{\href{https://www.tech.gov.sg/}{Government Technology Agency of Singapore (GovTech)}}
+{
+\role{\emph{Product Engineer, Government Digital Services (GDS)}}{Jan 2015 \to Jan 2017}
+\begin{itemize}
+\item Ruby on Rails/React.js developer for \href{https://www.businessgrants.gov.sg/}{\emph{Business Grant Portal (BGP)}} involving various government agencies
+\item Re-engineered BGP's frontend/backend into a single-page application to provide a slicker user experience and interface
+\item Established a unified architecture for \emph{BGP} to reduce application complexity, improve code reusability, reliability and performance
+\item Mentored and coached the team, new hires and vendors on the latest open source technologies.
+\item Employed agile software development methodologies and techniques (scrum, test-driven development, pair programming) to deliver quality products with high business value
+\item Technology stack: Ruby on Rails, Capybara, RSpec, JavaScript (ES6), ReactJS, Redux, Alt, Immutable.js, Jest, Webpack, Mocha, Karma
+\end{itemize}
+}
+
+\entry
+{\href{https://www.dso.org.sg/}{DSO National Laboratories}}
+{
+\role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
+\begin{itemize}
+\item Analyzed protection mechanisms of Microsoft Windows kernel
+\item Researched novel reverse engineering techniques using emulators and virtualization technologies
+\item Conducted network security research on NAT networks
+\item If I told you more I would have to kill you \dots
+\end{itemize}
+}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \section{education}
-%\begin{entrylist}
-%------------------------------------------------
 \entry
 {\href{http://www.nus.edu.sg/}{National University of Singapore}}
-{Aug 2010 \to June 2014}
-{\emph{1st Class Honours in Bachelor of Computing, Computer Science}
+{
+\role{\emph{1st Class Honours in Bachelor of Computing, Computer Science}}{Aug 2010 \to June 2014}
 \begin{itemize}
-\item Dissertation (Applied Cryptography) -- \href{https://github.com/clouddra/FYP---Key-Aggregation/blob/master/paper/paper.pdf}{\emph{Efficient Key Aggregation for Cloud Storage}}
-\item Specialization in Information Security, focus area in Parallel Computing
-\item Awarded Dean's List for 3 semesters
+    \item Dissertation (Applied Cryptography) -- \href{https://github.com/clouddra/FYP---Key-Aggregation/blob/master/paper/paper.pdf}{\emph{Efficient Key Aggregation for Cloud Storage}}
+    \item Specialization in Information Security, focus area in Parallel Computing
+    \item Awarded Dean's List for 3 semesters
 \end{itemize}
 }
-%------------------------------------------------
-%\end{entrylist}
+
 
 %----------------------------------------------------------------------------------------
 %	Projects SECTION
 %----------------------------------------------------------------------------------------
-%\vspace{-2.2\parsep}
-%\section{projects}
-%\entrynormal{
-%\begin{description}[style=unboxed,leftmargin=0cm, parsep=1.5pt]
-%\item[WEP Cracker] Cryptanalysis attack on \href{https://en.wikipedia.org/wiki/RC4}{RC4 cipher} used in WEP
-%\item[\href{https://github.com/sockmister/teach}{TeachMe!}] Social networking site which aims to bring together people with common interests
-%\item[\href{https://github.com/clouddra/SPA}{SPA}] Static source code analyzer and parser
-%\item[{\href{https://github.com/clouddra/Ethogram}{Ethogram}}] Android app which simplifies the process of cataloging and recording animal behavior
-%\item[\href{https://github.com/clouddra/News-Butler}{News Butler}] Proof-of-concept Android news app which learns the preferences of user using data mining techniques
-%\item[{\href{https://github.com/yzdong/impulsive-philanthropist-addon}{impulsive-philanthropist}}] Google Chrome extension that encourages people to make donations when making online purchases
-%\end{description}
-%}
 \section{publications}
-\entrysmall{\href{https://github.com/dkhungme/FastKAC}{Practical and Scalable Sharing of Encrypted Data in Cloud Storage with Key Aggregation}}{\href{http://ihmmsec.org/}{IH\&MMSec 2016}}
+\entrysmall{\href{https://www.researchgate.net/publication/303902017_Practical_and_Scalable_Sharing_of_Encrypted_Data_in_Cloud_Storage_with_Key_Aggregation}{Practical and Scalable Sharing of Encrypted Data in Cloud Storage with Key Aggregation}}{\href{http://ihmmsec.org/}{IH\&MMSec 2016}}
 \entrysmall{\href{https://goo.gl/aFVeyy}{React Rails for Business Grants Portal}}{Medium}
-%\end{description}
-%}
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\section{experience}	
-\entry
-{\href{http://www.nutonomy.com/}{nuTonomy}}
-{Jan 2015 \to Now}
-{\emph{Software Engineer}
-\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Full stack developer (.NET Core/React) for shared services/mapping team.
-\item Implemented tiling based three.js mesh garbage collector which improved frame rates of annotated maps by 300\%.
-\item Introduced and coached the software team on Typescript/React. New CRUD services are written in Typescript/React and old services are incrementally rewritten using Typescript.
-\item Built and pioneered various microservices (logs processsing, bookings, command center, computations) using modern .NET core on linux. Established coding standards for all backend microservices used in the company.
-\item Set up one-command deployment procedures for all backend microservices by leverage on AWS cloud services(Elasticbeanstalk, Docker, Kinesis, Terraform). Uptime is higher and less error prone as compared to SSH-based deployments used previously.
-\item Migrated log processing service from a single machine to a cloud-based service using streaming and reactive programming techniques (Rx.NET), resulting in improved reliability and scalability (processing thousands of car logs $\approx$1TB daily)
-\item Set up company-wide authentication/authorization OAuth service using Auth0 to better protect company's intellectual property
-\item Technology stack: ASP.NET Core MVC, Typscript, React, Redux, AWS Tools
-\end{itemize}}
-
-\entry
-{\href{https://www.tech.gov.sg/}{Government Technology Agency of Singapore (GovTech)}}
-{Jan 2015 \to Now}
-{\emph{Product Engineer, Government Digital Services (GDS)}
-\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Ruby on Rails/React.js developer for Business Grant Portal (BGP) involving various government agencies.
-\item Re-engineered the entire BGP frontend/backend into a single-page application to provide a slicker user experience and interface.
-\item Established a unified architecture for BGP to reduce application complexity, improve code reusability, reliability and performanc.e
-\item Set up dashboards (\href{http://grafana.org/}{Grafana}, \href{https://prometheus.io/}{Prometheus}) to visualize key business metrics and to monitor system performance.
-\item Mentored and coached the team, new hires and vendors on the latest open source technologies.
-\item Employed modern software development methodologies and techniques (scrum, test-driven development, pair programming) to deliver quality products with high business value. 
-\end{itemize}}
-
-\entry
-{\href{https://www.dso.org.sg/}{DSO National Laboratories}}
-{July 2014 \to Jan 2015}
-{\emph{Member of Technical Staff, Computer Security Lab}
-\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Analyzed protection mechanisms of Microsoft Windows kernel
-\item Researched novel reverse engineering techniques using emulators and virtualization technologies
-\item Conducted network security research on NAT networks
-\item If I told you more I would have to kill you \dots
-\end{itemize}}
-%\begin{entrylist}
-%------------------------------------------------
-\entry
-{\href{http://www.shoppink.me/}{TADA Pte Ltd}}
-{May 2013 \to Aug 2013}
-{\emph{Mobile Development Intern}
-\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-\item Independently picked up iOS and Android development concepts within a period of 3 months.
-\item Developed \href{http://www.shoppink.me/}{\emph{Shoppink}} (Android, 2 months) -- mobile e-commerce platform for blogshops. Shoppink uses a specialized algorithm to tracks products from over 200 blogshops.
-\item Developed \href{http://www.shoppink.me/tomyself}{\emph{ToMyself}} (iOS, 1 month) -- mailer app designed for users who frequently send emails to themselves. \emph{ToMyself} is available on App Store.
-\end{itemize}}
-%------------------------------------------------
-%\entry
-%{\href{http://www.rgei.com/}{RGE Pte Ltd}}
-%{May 2011 \to July 2011}
-%{\emph{Summer Intern}
-%\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-%\item Collaborated extensively with overseas team members for the development and testing of corporate dashboard, which presents raw data in a visually meaningful way, assisting the top management in their decision making process 
-%\item Assisted in the deployment of IT infrastructure for more than 100 staff in a newly renovated office
-%\item Provided IT support for more than 300 end users, expediting the resolution of any technical problems faced so as to minimize disruption to their business
-%\item Supported server and blackberry administration
-%\end{itemize}}
-%------------------------------------------------
-%\entry
-%{\href{http://www.ncs.com.sg/}{NCS Pte Ltd}}
-%{Nov 2009 -- May 2010}
-%{\emph{Temporary Staff, Chief Architect Office}
-%\begin{itemize}[topsep=2.5pt, parsep=1.5pt]
-%\item Collaborated with a team of consultants of different nationalities for a multi-million dollar government project.
-%\item Assisted analysts in the design and coding of the mockups, giving clients a visual experience, allowing them to give better feedback on the system and helps streamlines the requirements gathering process.
-%\item Developed a prototype as an illustrative reference for offshore. development teams who may have difficulties understanding the specifications due to language barriers.
-%\end{itemize}
-%}
 %----------------------------------------------------------------------------------------
 %	CERTIFICATIONS
 %----------------------------------------------------------------------------------------
@@ -197,43 +160,5 @@ Android SDK, iOS SDK
 \entrysmall
 {\href{https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm}{Certified ScrumMaster}}
 {Apr 2015 \to Apr 2017}
-%%----------------------------------------------------------------------------------------
-%%	CO-CURRICULAR SKILLS SECTION
-%%----------------------------------------------------------------------------------------
-%\vspace{-2.2\parsep}
-%\section{co-curricular}
-%\entry
-%{\href{http://www.sg.emb-japan.go.jp/culture_kizuna.htm}{Kizuna Project}}
-%{Jul 2012}
-%{\emph{Cultural exchange program to Japan}
-%\begin{itemize}
-%\item Gained awareness of Japan's post-earthquake revival efforts as well as the economic and social impact the earthquake had on Fukushima 
-%\item Created a \href{http://courseware.nus.edu.sg/e-raion/document/KIZUNA/ChongYunLongPhotobook.pdf}{photobook} and a \href{http://courseware.nus.edu.sg/e-raion/document/KIZUNA/ChongYunLongReport.pdf}{report} to share my experiences on the trip and to educate the public about the post-earthquake situation in Fukushima 
-%\end{itemize}
-%}
-
-
-%\entry
-%{\href{http://www.mindef.gov.sg/imindef/home.html}{National Service. MINDEF Medical Centre (MMC)}}
-%{Jan 2008 -- Nov 2009}
-%{\emph{Combat Medic, Registration/Appointment IC}
-%\begin {itemize}
-%\item Managed and supervised the registration and administration section of MMC
-%\item Revamped registration and administration workflow, which help improved customer experience and alleviating unnecessary waiting
-%\item Spearheaded the design of a standardized emergency drug manual and was awarded silver in WITs competition
-%\item Received commendation from various officers throughout my stint in MMC
-%\end{itemize}
-%}
-
-%\entry
-%{\href{http://www.simtech.a-star.edu.sg/}{A*STAR (SIMTech)}}
-%{Nov 2006 -- Dec 2006}
-%{\emph{Research Intern}
-%\begin {itemize}
-%\item Worked in a team of research scientists for an A*STAR-Rolls Royce collaboration project.
-%\item Calibrated and programmed an industrial gantry robot used for fuel cell assembly
-%\item Contributed ideas to the design of the gantry robot
-%\end{itemize}
-%}
 
 \end{document}
