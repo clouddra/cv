@@ -22,7 +22,8 @@
 \documentclass[]{cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
 \begin{document}
-\header{Chong }{Yun Long}{Fullstack Software Engineer} % Your name and current job title/field
+\header{Chong }{Yun Long}{Fullstack Software Engineer}
+% \smallheader{test}{2}
 
 \begin{multicols}{3}
 \entryinfo{contact}
@@ -44,15 +45,16 @@
 \columnbreak
 \entryinfo{programming}
 \begin{infoitemize}
-\item Typescript, JavaScript, React, Redux, Next.js
+\item Typescript, React, Redux, Next.js
 \item Java, Spring Boot
 \item C\#, ASP.NET core
-\item AWS, terraform
+\item AWS, Terraform, Kubernetes
 \item Python, Ruby on Rails
 \end{infoitemize}
 \end{multicols}
 
-\vspace{-2\parsep}
+% \vspace{-2\parsep}
+\vspace{-1\parsep}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -60,67 +62,88 @@
 
 \section{experience}
 
+
+\entry
+{\href{https://gotofinancial.com/en}{Goto Financial}}
+{
+\role{\emph{Lead Software Engineer, Commerce Enablement -- \href{https://www.mokapos.com/en}{Moka POS}}}{Jun 2021 \to Now}
+\begin{itemize}
+\item Managed a team of $\approx$10 engineers ranging from junior to lead engineers. The team is responsible for delivering features across multiple platforms (Backend, iOS, Android, and Web) for Commerce Enablement's flagship \href{https://www.mokapos.com/en}{\emph{Moka}} product.
+\item Oversaw the development of one of the most difficult projects (\emph{Bundle Package}) for \emph{Moka}. The feature was successfully launched after a six-month development period.
+\item Worked on Apache Flink proof-of-concepts. This includes building reusable code templates, setting up CI/CD, and automating alerting.
+\item Wrote scripts and pipelines to automate Kafka Connect administrative tasks.
+\item Converted Javascript codebase ($> $4000 files) to Typescript, improving codebase maintainability and reliability.
+\item Migrated browser tests from selenium to playwright, resulting in an improvement in end-to-end runtime by up to 5$\times$.
+\item Introduced tools such as OpenAPI client generation, redux toolkit and tailwind to reduce superfluous code, increase productivity and decrease bugs.
+\item Technologies: Kubernetes $\cdot$ TypeScript $\cdot$ ReactJS $\cdot$ Java $\cdot$ Python $\cdot$ JavaScript
+\end{itemize}
+}
+
 \entry
 {\href{https://www.indeed.com/}{Indeed}}
 {
-\role{\emph{Senior Software Engineer, Careers}}{Apr 2019 \to Now}
+\role{\emph{Senior Software Engineer, Careers}}{Apr 2019 \to Jun 2021}
 \begin{itemize}
 \item Full stack engineer working on \href{https://www.indeed.com/career}{\emph{Careers Explorer}} and \href{https://www.indeed.com/certifications/}{\emph{Certifications}}. \emph{Career Explorer} is the first large scale public facing node application at Indeed with over two million month views.
 \item Lead the frontend architecture design of \emph{Careers Explorer}.
 \item Built and launch \emph{Careers Explorer} together with a team of four engineers in three months. This includes various devops tasks (production/error monitoring, CDN integration, CI/CD pipelines).
 \item Coached both engineers within and outside of the team on various best practices ranging from API design, typescript and react development, backend best practices.
-\item Migrated \emph{Indeed Certifications} from legacy Django templates to React
-\item Technology stack: Java 8 Spring Boot, Next.js with Typescript, Styled System
+\item Migrated \emph{Indeed Certifications} from legacy Django templates to React.
+\item Technologies: Next.js $\cdot$ TypeScript $\cdot$ ReactJS $\cdot$ Java $\cdot$ Python $\cdot$ JavaScript
 \end{itemize}
 }
 
+% \pagebreak
+
 \entry
-{\href{https://www.aptiv.com/solutions/autonomous-mobility}{nuTonomy/Aptiv}}
+{\href{https://en.wikipedia.org/wiki/NuTonomy}{nuTonomy}/\href{https://www.aptiv.com/solutions/autonomous-mobility}{Motional}}
 {
 \role{\emph{Senior Software Engineer, Data Platform}}{Sep 2018 \to Apr 2019}
 \vspace{-\belowdisplayshortskip}
 \role{\emph{Software Engineer, Data Platform}}{Jan 2017 \to Sep 2018}
 \begin{itemize}
-\item \emph{nuTonomy} was \href{https://techcrunch.com/2017/10/24/delphi-buys-nutonomy-for-400-million-to-scale-and-deliver-autonomous-vehicles/}{acquired by Delphi (now Aptiv) in Oct 2017 for USD\$400 million}.
+\item \emph{nuTonomy} was acquired by \emph{Delphi} (now \emph{Aptiv}) in \href{https://techcrunch.com/2017/10/24/delphi-buys-nutonomy-for-400-million-to-scale-and-deliver-autonomous-vehicles/}{Oct 2017 for USD\$400 million} and subsequently became part of \href{https://www.aptiv.com/solutions/autonomous-mobility}{\emph{Motional}}, a joint venture between \emph{Aptiv} and \emph{Hyundai}.
 \item Full stack developer (.NET Core/React) for shared services/mapping team.
 \item Built large scale docker-based compute orchestration infrastructure which is able to dynamically scaled to support and coordinate hundreds of machines on AWS. The platform is used to support ML training pipelines, generate autonomous driving footage, running large scale safety simulations and computing important metrics.
 \item Set up one-command deployment procedures for all backend microservices by leverage on AWS cloud services (Serverless, Terraform). Uptime is higher and less error prone as compared to SSH-based deployments used previously.
-\item Setup and maintain Hadoop cluster processing large amounts of data generated from vehicle logs (4GB per vehicle per min)
+\item Setup and maintain Hadoop cluster processing large amounts of data generated from vehicle logs (4GB per vehicle per min).
 \item Introduced and coached the software team on Typescript/React. New CRUD services are written in Typescript/React and old services are incrementally rewritten using Typescript.
 \item Built and pioneered various microservices using modern .NET core on linux. Established coding standards for all backend microservices used in the company.
-\item Set up company-wide authentication/authorization using Auth0
+\item Set up company-wide authentication/authorization using Auth0.
 \item Implemented tiling based three.js mesh garbage collector which improved frame rates of annotated maps by 300\%.
-\item Technology stack: ASP.NET Core MVC, Hadoop, Spark, Typescript, Python, React, RxJS, AWS
+\item Technologies: Terraform $\cdot$ Amazon Web Services (AWS) $\cdot$ TypeScript $\cdot$ C\# $\cdot$ .NET Framework $\cdot$ ReactJS $\cdot$ Python $\cdot$ JavaScript
 \end{itemize}
 }
-
-\pagebreak
 
 \entry
 {\href{https://www.tech.gov.sg/}{Government Technology Agency of Singapore (GovTech)}}
 {
 \role{\emph{Product Engineer, Government Digital Services (GDS)}}{Jan 2015 \to Jan 2017}
 \begin{itemize}
-\item Ruby on Rails/React.js developer for \href{https://www.businessgrants.gov.sg/}{\emph{Business Grant Portal (BGP)}} involving various government agencies
-\item Re-engineered BGP's frontend/backend into a single-page application to provide a slicker user experience and interface
-\item Established a unified architecture for \emph{BGP} to reduce application complexity, improve code reusability, reliability and performance
+\item Ruby on Rails/React.js developer for \href{https://www.businessgrants.gov.sg/}{\emph{Business Grant Portal (BGP)}} involving various government agencies.
+\item Re-engineered BGP's frontend/backend into a single-page application to provide a slicker user experience and interface.
+\item Established a unified architecture for \emph{BGP} to reduce application complexity, improve code reusability, reliability and performance.
 \item Mentored and coached the team, new hires and vendors on the latest open source technologies.
-\item Employed agile software development methodologies and techniques (scrum, test-driven development, pair programming) to deliver quality products with high business value
-\item Technology stack: Ruby on Rails, Capybara, RSpec, JavaScript (ES6), ReactJS, Redux, Alt, Immutable.js, Jest, Webpack, Mocha, Karma
+\item Employed agile software development methodologies and techniques (scrum, test-driven development, pair programming) to deliver quality products with high business value.
+\item Technologies: Ruby on Rails $\cdot$ Ruby $\cdot$ ReactJS $\cdot$ JavaScript
 \end{itemize}
 }
 
-\entry
-{\href{https://www.dso.org.sg/}{DSO National Laboratories}}
-{
-\role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
-\begin{itemize}
-\item Analyzed protection mechanisms of Microsoft Windows kernel
-\item Researched novel reverse engineering techniques using emulators and virtualization technologies
-\item Conducted network security research on NAT networks
-\item If I told you more I would have to kill you \dots
-\end{itemize}
-}
+% \entry
+% {\href{https://www.dso.org.sg/}{DSO National Laboratories}}
+% {
+% \role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
+% \begin{itemize}
+% \item Analyzed protection mechanisms of Microsoft Windows kernel.
+% \item Researched novel reverse engineering techniques using emulators and virtualization technologies.
+% \item Conducted network security research on NAT networks.
+% \item If I told you more I would have to kill you. \dots
+% \end{itemize}
+% }
+
+% • Developed cutting-edge static/dynamic program analysis techniques to improve software security.
+% • Built disassemblers for x86-64 platform.
+% • Research Areas: Microsoft Windows kernel, virtual machines internals, network security
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -150,15 +173,15 @@
 %	CERTIFICATIONS
 %----------------------------------------------------------------------------------------
 
-\section{certifications}
-\entrysmall
-{\href{https://www.iss.nus.edu.sg/ProfessionalCourses/SearchCourse/CourseDetail/tabid/267/cid/399/cname/lean-kanban-foundation/Default.aspx}{Kanban Management Professional - I}}
-{Jun 2016 \to Now}
-\entrysmall
-{\href{http://securitystartshere.org/page-training-oswap.htm}{Organizational Systems Web Application Pentester}}
-{Apr 2015 \to Now}
-\entrysmall
-{\href{https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm}{Certified ScrumMaster}}
-{Apr 2015 \to Apr 2017}
+% \section{certifications}
+% \entrysmall
+% {\href{https://www.iss.nus.edu.sg/ProfessionalCourses/SearchCourse/CourseDetail/tabid/267/cid/399/cname/lean-kanban-foundation/Default.aspx}{Kanban Management Professional - I}}
+% {Jun 2016 \to Now}
+% \entrysmall
+% {\href{http://securitystartshere.org/page-training-oswap.htm}{Organizational Systems Web Application Pentester}}
+% {Apr 2015 \to Now}
+% \entrysmall
+% {\href{https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm}{Certified ScrumMaster}}
+% {Apr 2015 \to Apr 2017}
 
 \end{document}
