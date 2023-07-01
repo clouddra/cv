@@ -84,11 +84,11 @@
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth,
 minimum height=30mm, yshift=8mm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{18pt}{36pt}\color{header}%
+      \fontsize{16pt}{36pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{header}%
+      \fontsize{12pt}{24pt}\color{header}%
       {\bodyfont #3}
     };
   \end{tikzpicture}
@@ -166,25 +166,38 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 
 }
 \newcommand{\entry}[2]{
+  \filbreak
     \textbf{#1}\\
     {#2}\vspace{1.2\parsep}
 }
+
 
 \newcommand{\entrynormal}[1]{\parbox[t]{13.5cm}{
 	\vspace{-1.5\parsep}
     {#1}\vspace{\parsep}%
   }\\}
 
+% \newcommand{\entrysmall}[2]{
+%     {#1}%
+%     \hfill%
+%     {\footnotesize\color{gray} \bodyfont #2}\vspace{\parsep}
+% \\}
+
 \newcommand{\entrysmall}[2]{
     {#1}%
     \hfill%
-    {\footnotesize\color{gray} \bodyfont #2}\vspace{\parsep}
-\\}
+    {\footnotesize\color{gray} \bodyfont #2}}
 
 \newcommand{\entryinfo}[1]{\parbox[t]{13.5cm}{%
     \large\headingfont\color{headercolor}%
     \@sectioncolor #1
 }}
+
+\newcommand{\techstack}[1]{%
+  \small \bodyfont
+    \textbf{Technologies:} #1\checknextarg}
+\newcommand{\checknextarg}{\@ifnextchar\bgroup{\gobblenextarg}{}}
+\newcommand{\gobblenextarg}[1]{ $\vert$ #1\@ifnextchar\bgroup{\gobblenextarg}{}}
 
 %%%%%%%%%%%%%%%%
 % Other tweaks %
