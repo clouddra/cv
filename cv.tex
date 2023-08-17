@@ -22,10 +22,20 @@
 \documentclass[]{cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
 \begin{document}
+
+
+\addstretch{\abovedisplayskip}
+\addstretch{\abovedisplayshortskip}
+\addstretch{\belowdisplayskip}
+\addstretch{\belowdisplayshortskip}
+\setlength{\parskip}{0pt}
+
+
 \header{Chong }{Yun Long}{Fullstack Software Engineer}
 % \smallheader{test}{2}
 
 \begin{multicols}{3}
+
 \entryinfo{contact}
 \begin{infoitemize}
 \item +65 9852 0910
@@ -50,6 +60,7 @@
 \item C\#, ASP.NET core
 \item AWS, Terraform, Kubernetes
 \item Python, Ruby on Rails
+\item \LaTeX
 \end{infoitemize}
 \end{multicols}
 
@@ -61,6 +72,19 @@
 %----------------------------------------------------------------------------------------
 
 \section{experience}
+\addstretch{\baselineskip}
+
+\entry
+{\href{https://www.gic.com.sg/}{GIC}}
+{
+\role{\emph{Vice President -- Investment Insights Group}}{May 2023 \to now}
+\begin{itemize}
+\item Built internal systems to support Private Equity investments and analysis
+\item Implemented LLM based chat agents to improve productivity of investment managers and to derive insights out of internal datasets
+\end{itemize}
+\techstack{FastAPI}{Python}{React}{TypeScript}{Kubernetes}
+}
+
 
 \entry
 {\href{https://gotofinancial.com/en}{Goto Financial}}
@@ -69,6 +93,7 @@
 \begin{itemize}
 \item Managed a team of approximately 10 engineers, responsible for delivering features across multiple platforms (Backend, iOS, Android, and Web) for the flagship \emph{Moka} product of Commerce Enablement.
 % bundle package, bundle modifier, custom discount
+% code generation
 \item Led the development of the challenging (\emph{Bundle Package}) project, which was successfully launched after a six-month development period.
 \item Led Apache Flink proof-of-concepts, creating reusable helm/code templates, setting up CI/CD, and automating alerting.
 \item Developed scripts and pipelines to automate Kafka Connect administrative tasks.
@@ -100,7 +125,7 @@
 {\href{https://en.wikipedia.org/wiki/NuTonomy}{nuTonomy}/\href{https://www.aptiv.com/solutions/autonomous-mobility}{Motional}}
 {
 \role{\emph{Senior Software Engineer, Data Platform}}{Sep 2018 \to Apr 2019}
-\vspace{-\belowdisplayshortskip}
+% \vspace{-\belowdisplayshortskip}
 \role{\emph{Software Engineer, Data Platform}}{Jan 2017 \to Sep 2018}
 \begin{itemize}
 \item Full stack developer (.NET Core/React) for data platform/mapping team at \href{https://en.wikipedia.org/wiki/NuTonomy}{\emph{nuTonomy}} which later \href{https://techcrunch.com/2017/10/24/delphi-buys-nutonomy-for-400-million-to-scale-and-deliver-autonomous-vehicles/}{became} part of \href{https://www.aptiv.com/solutions/autonomous-mobility}{\emph{Motional}}, a joint venture between \emph{Aptiv} and \emph{Hyundai}.
@@ -129,17 +154,18 @@
 \techstack{Ruby on Rails}{Ruby}{React}{Javascript}
 }
 
-% \entry
-% {\href{https://www.dso.org.sg/}{DSO National Laboratories}}
-% {
-% \role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
-% \begin{itemize}
-% \item Analyzed protection mechanisms of Microsoft Windows kernel.
-% \item Researched novel reverse engineering techniques using emulators and virtualization technologies.
-% \item Conducted network security research on NAT networks.
-% \item If I told you more I would have to kill you. \dots
-% \end{itemize}
-% }
+\entry
+{\href{https://www.dso.org.sg/}{DSO National Laboratories}}
+{
+\role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
+\begin{itemize}
+\item Analyzed protection mechanisms of Microsoft Windows kernel.
+\item Researched novel reverse engineering techniques using emulators and virtualization technologies.
+\item Conducted network security research on NAT networks.
+\item If I told you more I would have to kill you. \dots
+\end{itemize}
+\techstack{Windows Kernel}{x86}{QEMU internals}{IDA Pro}{Python}{C}
+}
 
 % • Developed cutting-edge static/dynamic program analysis techniques to improve software security.
 % • Built disassemblers for x86-64 platform.

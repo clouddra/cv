@@ -218,3 +218,6 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 \newenvironment{infoitemize}
 {\begin{itemize}[topsep=1.5pt, parsep=0.5pt,itemsep=1pt]}
 {\end{itemize}}
+
+
+\newcommand{\addstretch}[1]{\addtolength{#1}{\fill}}
