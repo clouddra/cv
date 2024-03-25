@@ -1,4 +1,4 @@
-\ProvidesClass{k-cv}[2015/11/29 CV class]
+\ProvidesClass{cv}[2015/11/29 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -79,17 +79,21 @@
   \color{white}%
 }
 
-\newcommand{\header}[3]{%
+\newcommand{\header}[4]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth,
-minimum height=30mm, yshift=8mm] (box) at (current page.north){};
+minimum height=38mm, yshift=13mm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{16pt}{36pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
-    \node [anchor=north] at (name.south) {%
+    \node [anchor=north] (title) at (name.south) {%
       \fontsize{12pt}{24pt}\color{header}%
       {\bodyfont #3}
+    };
+    \node [anchor=north] at (title.south) {%
+      \fontsize{8pt}{24pt}\color{header}%
+      {\bodyfont #4}
     };
   \end{tikzpicture}
 }
@@ -218,3 +222,6 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 \newenvironment{infoitemize}
 {\begin{itemize}[topsep=1.5pt, parsep=0.5pt,itemsep=1pt]}
 {\end{itemize}}
+
+
+\newcommand{\addstretch}[1]{\addtolength{#1}{\fill}}

@@ -22,45 +22,70 @@
 \documentclass[]{cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
 
 \begin{document}
-\header{Chong }{Yun Long}{Fullstack Software Engineer}
+
+\addstretch{\abovedisplayskip}
+\addstretch{\abovedisplayshortskip}
+\addstretch{\belowdisplayskip}
+\addstretch{\belowdisplayshortskip}
+\setlength{\parskip}{0pt}
+
+
+\header{Chong }{Yun Long}{Fullstack Software Engineer}{\href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com} \textbar \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}}
 % \smallheader{test}{2}
 
-\begin{multicols}{3}
-\entryinfo{contact}
-\begin{infoitemize}
-\item +65 9852 0910
-\item \href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com}
-\item \href{https://github.com/clouddra}{github.com/clouddra}
-\item \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}
-\end{infoitemize}
-\vspace*{\fill}
-\columnbreak
-\entryinfo{languages [human]}
-\begin{infoitemize}
-\item english \to fluent
-\item mandarin chinese \to fluent
-\item japanese \to conversant
-\end{infoitemize}
-\vspace*{\fill}
-\columnbreak
-\entryinfo{programming}
-\begin{infoitemize}
-\item Typescript, React, Redux, Next.js
-\item Java, Spring Boot
-\item C\#, ASP.NET core
-\item AWS, Terraform, Kubernetes
-\item Python, Ruby on Rails
-\end{infoitemize}
-\end{multicols}
+% \begin{multicols}{1}
 
-% \vspace{-2\parsep}
-\vspace{-1\parsep}
+% \entryinfo{contact}
+% \begin{infoitemize}
+% \item +65 9852 0910
+% \item \href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com}
+% \item \href{https://github.com/clouddra}{github.com/clouddra}
+% \item \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}
+% \end{infoitemize}
+% \vspace*{\fill}
+% \columnbreak
+% \entryinfo{languages [human]}
+% \begin{infoitemize}
+% \item english \to fluent
+% \item mandarin chinese \to fluent
+% \item japanese \to conversant
+% \end{infoitemize}
+% \vspace*{\fill}
+% \columnbreak
+% \entryinfo{programming}
+% \begin{infoitemize}
+% \item Typescript, React, Redux, Next.js
+% \item Java, Spring Boot
+% \item C\#, ASP.NET core
+% \item AWS, Terraform, Kubernetes
+% \item Python, Ruby on Rails
+% \item \LaTeX
+% \end{infoitemize}
+% \end{multicols}
+
+\vspace{4\parsep}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \section{experience}
+\addstretch{\baselineskip}
+
+\entry
+{\href{https://www.gic.com.sg/}{GIC}}
+{
+\role{\emph{Vice President -- Investment Insights Group}}{May 2023 \to now}
+\begin{itemize}
+\item Developed internal systems to support Private Equity investments and analysis
+\item Implemented chat agents using vector stores and OpenAI APIs to enhance the efficiency of investment managers and extract insights from internal datasets.
+\item Reduced build times for a large JavaScript codebase by up to fourfold, from 20 minutes to 5 minutes.
+\item Optimized performance across various systems, achieving a latency reduction of up to 70\% for backend APIs while ensuring better reliability through the offloading analytics to the browser using DuckDB-Wasm.
+\item Identified issues with network routing to overseas offices and optimized network bandwidth by implementing various compression techniques, resulting in a bandwidth reduction of over 30\%.
+\end{itemize}
+\techstack{FastAPI}{Python}{React}{TypeScript}{Kubernetes}
+}
+
 
 \entry
 {\href{https://gotofinancial.com/en}{Goto Financial}}
@@ -69,6 +94,7 @@
 \begin{itemize}
 \item Managed a team of approximately 10 engineers, responsible for delivering features across multiple platforms (Backend, iOS, Android, and Web) for the flagship \emph{Moka} product of Commerce Enablement.
 % bundle package, bundle modifier, custom discount
+% code generation
 \item Led the development of the challenging (\emph{Bundle Package}) project, which was successfully launched after a six-month development period.
 \item Spearheaded Apache Flink proof-of-concepts, creating reusable helm/code templates, setting up CI/CD, and automating alerting.
 \item Developed scripts and pipelines to automate Kafka Connect administrative tasks.
@@ -88,19 +114,17 @@
 \item Spearheaded the architecture design of \href{https://www.indeed.com/career}{\emph{Careers Explorer}}. \emph{Career Explorer} is the first large scale public facing node application at Indeed with over two million monthly views.
 \item Collaborated with a team of four engineers to build and launch \emph{Careers Explorer} within three months, incorporating essential devops tasks such as production/error monitoring, CDN integration, and CI/CD pipelines.
 \item Coached engineers within and outside the team on API design, Typescript and React development, and backend best practices using Java Spring Boot.
-\item Migrated \href{https://www.indeed.com/certifications/}{\emph{Indeed Certifications}}, an incubator product, from legacy Django templates to a modern stack on React and Spring Boot.
+\item Migrated \emph{Indeed Certifications}, an incubator product, from legacy Django templates to a modern stack on React and Spring Boot.
 \item Developed and maintained Presto/Trino-based ETL pipelines to track conversion and A/B testing metrics, enabling data-driven decision-making.
 \end{itemize}
 \techstack{Spring Boot}{Java}{TypeScript}{Next.js}{Python}
 }
 
-% \pagebreak
-
 \entry
 {\href{https://en.wikipedia.org/wiki/NuTonomy}{nuTonomy}/\href{https://www.aptiv.com/solutions/autonomous-mobility}{Motional}}
 {
 \role{\emph{Senior Software Engineer, Data Platform}}{Sep 2018 \to Apr 2019}
-\vspace{-\belowdisplayshortskip}
+% \vspace{-\belowdisplayshortskip}
 \role{\emph{Software Engineer, Data Platform}}{Jan 2017 \to Sep 2018}
 \begin{itemize}
 \item Full stack developer (.NET Core/React) for data platform/mapping team at \href{https://en.wikipedia.org/wiki/NuTonomy}{\emph{nuTonomy}} which later \href{https://techcrunch.com/2017/10/24/delphi-buys-nutonomy-for-400-million-to-scale-and-deliver-autonomous-vehicles/}{became} part of \href{https://www.aptiv.com/solutions/autonomous-mobility}{\emph{Motional}}, a joint venture between \emph{Aptiv} and \emph{Hyundai}.
@@ -139,6 +163,7 @@
 % \item Conducted network security research on NAT networks.
 % \item If I told you more I would have to kill you. \dots
 % \end{itemize}
+% \techstack{Windows Kernel}{x86}{QEMU internals}{IDA Pro}{Python}{C}
 % }
 
 % • Developed cutting-edge static/dynamic program analysis techniques to improve software security.
