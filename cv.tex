@@ -23,7 +23,6 @@
 
 \begin{document}
 
-
 \addstretch{\abovedisplayskip}
 \addstretch{\abovedisplayshortskip}
 \addstretch{\belowdisplayskip}
@@ -31,40 +30,40 @@
 \setlength{\parskip}{0pt}
 
 
-\header{Chong }{Yun Long}{Fullstack Software Engineer}
+\header{Chong }{Yun Long}{Fullstack Software Engineer}{\href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com} \textbar \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}}
 % \smallheader{test}{2}
 
-\begin{multicols}{3}
+% \begin{multicols}{1}
 
-\entryinfo{contact}
-\begin{infoitemize}
-\item +65 9852 0910
-\item \href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com}
-\item \href{https://github.com/clouddra}{github.com/clouddra}
-\item \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}
-\end{infoitemize}
-\vspace*{\fill}
-\columnbreak
-\entryinfo{languages [human]}
-\begin{infoitemize}
-\item english \to fluent
-\item mandarin chinese \to fluent
-\item japanese \to conversant
-\end{infoitemize}
-\vspace*{\fill}
-\columnbreak
-\entryinfo{programming}
-\begin{infoitemize}
-\item Typescript, React, Redux, Next.js
-\item Java, Spring Boot
-\item C\#, ASP.NET core
-\item AWS, Terraform, Kubernetes
-\item Python, Ruby on Rails
-\item \LaTeX
-\end{infoitemize}
-\end{multicols}
+% \entryinfo{contact}
+% \begin{infoitemize}
+% \item +65 9852 0910
+% \item \href{mailto:chong.yunlong+jobs@gmail.com}{chong.yunlong+jobs@gmail.com}
+% \item \href{https://github.com/clouddra}{github.com/clouddra}
+% \item \href{https://sg.linkedin.com/in/chongyl}{linkedin.com/in/chongyl}
+% \end{infoitemize}
+% \vspace*{\fill}
+% \columnbreak
+% \entryinfo{languages [human]}
+% \begin{infoitemize}
+% \item english \to fluent
+% \item mandarin chinese \to fluent
+% \item japanese \to conversant
+% \end{infoitemize}
+% \vspace*{\fill}
+% \columnbreak
+% \entryinfo{programming}
+% \begin{infoitemize}
+% \item Typescript, React, Redux, Next.js
+% \item Java, Spring Boot
+% \item C\#, ASP.NET core
+% \item AWS, Terraform, Kubernetes
+% \item Python, Ruby on Rails
+% \item \LaTeX
+% \end{infoitemize}
+% \end{multicols}
 
-\vspace{-1\parsep}
+\vspace{4\parsep}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -78,8 +77,11 @@
 {
 \role{\emph{Vice President -- Investment Insights Group}}{May 2023 \to now}
 \begin{itemize}
-\item Built internal systems to support Private Equity investments and analysis
-\item Implemented LLM based chat agents to improve productivity of investment managers and to derive insights out of internal datasets
+\item Developed internal systems to support Private Equity investments and analysis
+\item Implemented chat agents using vector stores and OpenAI APIs to enhance the efficiency of investment managers and extract insights from internal datasets.
+\item Reduced build times for a large JavaScript codebase by up to fourfold, from 20 minutes to 5 minutes.
+\item Optimized performance across various systems, achieving a latency reduction of up to 70\% for backend APIs while ensuring better reliability through the offloading analytics to the browser using DuckDB-Wasm.
+\item Identified issues with network routing to overseas offices and optimized network bandwidth by implementing various compression techniques, resulting in a bandwidth reduction of over 30\%.
 \end{itemize}
 \techstack{FastAPI}{Python}{React}{TypeScript}{Kubernetes}
 }
@@ -112,13 +114,11 @@
 \item Spearheaded the architecture design of \href{https://www.indeed.com/career}{\emph{Careers Explorer}}. \emph{Career Explorer} is the first large scale public facing node application at Indeed with over two million monthly views.
 \item Collaborated with a team of four engineers to build and launch \emph{Careers Explorer} within three months, incorporating essential devops tasks such as production/error monitoring, CDN integration, and CI/CD pipelines.
 \item Coached engineers within and outside the team on API design, Typescript and React development, and backend best practices using Java Spring Boot.
-\item Migrated \href{https://www.indeed.com/certifications/}{\emph{Indeed Certifications}}, an incubator product, from legacy Django templates to a modern stack on React and Spring Boot.
+\item Migrated \emph{Indeed Certifications}, an incubator product, from legacy Django templates to a modern stack on React and Spring Boot.
 \item Developed and maintained Presto/Trino-based ETL pipelines to track conversion and A/B testing metrics, enabling data-driven decision-making.
 \end{itemize}
 \techstack{Spring Boot}{Java}{TypeScript}{Next.js}{Python}
 }
-
-% \pagebreak
 
 \entry
 {\href{https://en.wikipedia.org/wiki/NuTonomy}{nuTonomy}/\href{https://www.aptiv.com/solutions/autonomous-mobility}{Motional}}
@@ -153,18 +153,18 @@
 \techstack{Ruby on Rails}{Ruby}{React}{Javascript}
 }
 
-\entry
-{\href{https://www.dso.org.sg/}{DSO National Laboratories}}
-{
-\role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
-\begin{itemize}
-\item Analyzed protection mechanisms of Microsoft Windows kernel.
-\item Researched novel reverse engineering techniques using emulators and virtualization technologies.
-\item Conducted network security research on NAT networks.
-\item If I told you more I would have to kill you. \dots
-\end{itemize}
-\techstack{Windows Kernel}{x86}{QEMU internals}{IDA Pro}{Python}{C}
-}
+% \entry
+% {\href{https://www.dso.org.sg/}{DSO National Laboratories}}
+% {
+% \role{\emph{Member of Technical Staff, Computer Security Lab}}{July 2014 \to Jan 2015}
+% \begin{itemize}
+% \item Analyzed protection mechanisms of Microsoft Windows kernel.
+% \item Researched novel reverse engineering techniques using emulators and virtualization technologies.
+% \item Conducted network security research on NAT networks.
+% \item If I told you more I would have to kill you. \dots
+% \end{itemize}
+% \techstack{Windows Kernel}{x86}{QEMU internals}{IDA Pro}{Python}{C}
+% }
 
 % • Developed cutting-edge static/dynamic program analysis techniques to improve software security.
 % • Built disassemblers for x86-64 platform.
